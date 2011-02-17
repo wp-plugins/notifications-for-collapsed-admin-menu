@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, notification, highlight, coffee2code
 Requires at least: 2.8
-Tested up to: 3.0.1
-Stable tag: 1.0
-Version: 1.0
+Tested up to: 3.1
+Stable tag: 1.0.1
+Version: 1.0.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -27,6 +27,8 @@ By default, the plugin utilizes WordPress's pending/update count background high
 *ADVANCED:* You can customize the background color used by applying a filter to 'c2c_collapsed_admin_menu_icon_highlight_color'.  For example, in your theme's functions.php file, you can add this line (but replace "#f5f500" with the color you want):
 
     `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', create_function( '', 'return "#f5f500";' ) );`
+
+Links: [Plugin Homepage]:(http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage]:(http://coffee2code.com)
 
 
 == Installation ==
@@ -53,11 +55,20 @@ Yes.  See the description section for an example of the one-liner you can use to
 
 == Changelog ==
 
+= 1.0.1 =
+* Fix bug with incorrect pending comment count when comment menu has submenu item(s)
+* Explicitly declare all class function public static
+* Note compatibility through WP 3.1+
+* Update copyright date (2011)
+
 = 1.0 =
 * Initial release
 
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Minor update: minor bugfix, noted compatibility with WP 3.1+, and updated copyright date.
 
 = 1.0 =
 Official initial release!

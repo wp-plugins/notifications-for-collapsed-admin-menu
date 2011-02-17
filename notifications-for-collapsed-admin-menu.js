@@ -1,5 +1,5 @@
 function c2c_maybe_highlight_comments_icon() {
-	var target = jQuery('#awaiting-mod .pending-count');
+	var target = jQuery('#awaiting-mod:first .pending-count');
 	var parent = target.parents('#menu-comments');
 	var css_class = 'collapsed-with-pending';
 	var i = target.text();

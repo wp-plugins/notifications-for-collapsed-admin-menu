@@ -2,17 +2,17 @@
 /**
  * @package Notifications_for_Collapsed_Admin_Menu
  * @author Scott Reilly
- * @version 1.0
+ * @version 1.0.1
  */
 /*
 Plugin Name: Notifications for Collapsed Admin Menu
-Version: 1.0
+Version: 1.0.1
 Plugin URI: http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
 Description: Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
-Compatible with WordPress 2.8+, 2.9+, 3.0+.
+Compatible with WordPress 2.8+, 2.9+, 3.0+, 3.1+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -21,7 +21,7 @@ Compatible with WordPress 2.8+, 2.9+, 3.0+.
 */
 
 /*
-Copyright (c) 2010 by Scott Reilly (aka coffee2code)
+Copyright (c) 2010-2011 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
@@ -45,8 +45,8 @@ if ( is_admin() && !class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) :
 		 *
 		 * @return void
 		 */
-		function init() {
-			add_action( 'admin_head', array( __CLASS__, 'add_css' ) );
+		public static function init() {
+			add_action( 'admin_head',            array( __CLASS__, 'add_css' ) );
 			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
 		}
 
@@ -55,7 +55,7 @@ if ( is_admin() && !class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) :
 		 *
 		 * @return void (Text will be echoed.)
 		 */
-		function add_css() {
+		public static function add_css() {
 			global $wp_version;
 			$default_color = version_compare( $wp_version, '2.9.99', '>' ) ? '#787875' : '#e66f00';
 			$color = apply_filters( 'c2c_collapsed_admin_menu_icon_highlight_color', $default_color );
@@ -79,7 +79,7 @@ CSS;
 		 *
 		 * @return void
 		 */
-		function enqueue_js() {
+		public static function enqueue_js() {
 			$base = 'notifications-for-collapsed-admin-menu';
 			wp_enqueue_script( $base, plugins_url( basename( dirname( __FILE__ ) ) . '/' . $base . '.js' ), array( 'jquery' ), '1.0', true );
 		}
