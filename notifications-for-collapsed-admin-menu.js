@@ -1,5 +1,7 @@
 function c2c_maybe_highlight_comments_icon() {
-	var target = jQuery('#awaiting-mod:first .pending-count');
+	var target = jQuery('#awaiting-mod:first .pending-count'); // WP < 3.2
+	if (! target.length)
+		target = jQuery('.awaiting-mod:first .pending-count');
 	var parent = target.parents('#menu-comments');
 	var css_class = 'collapsed-with-pending';
 	var i = target.text();
@@ -9,7 +11,7 @@ function c2c_maybe_highlight_comments_icon() {
 }
 function c2c_maybe_highlight_plugins_icon() {
 	var target = jQuery('.plugin-count:first');
-	var parent = target.parents('#menu-plugins')
+	var parent = target.parents('#menu-plugins');
 	var css_class = 'collapsed-with-pending';
 	var i = target.text();
 
