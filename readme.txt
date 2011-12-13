@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, notification, highlight, coffee2code
 Requires at least: 2.8
-Tested up to: 3.2
-Stable tag: 1.1
-Version: 1.1
+Tested up to: 3.3
+Stable tag: 1.1.1
+Version: 1.1.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -28,7 +28,7 @@ By default, the plugin utilizes WordPress's pending/update count background high
 
     `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', create_function( '', 'return "#f5f500";' ) );`
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Plugin Directory Page](http://wordpress.org/extend/plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -55,6 +55,13 @@ Yes.  See the description section for an example of the one-liner you can use to
 
 == Changelog ==
 
+= 1.1.1 =
+* Hook 'admin_enqueue_scripts' action instead of 'admin_head' to output CSS
+* Add version() to return plugin version
+* Note compatibility through WP 3.3+
+* Add link to plugin directory page to readme.txt
+* Update copyright date (2012)
+
 = 1.1 =
 * Add admin color scheme-specific color defaults
 * Improve CSS by making selector more specific in order to eliminate !important clauses
@@ -75,6 +82,9 @@ Yes.  See the description section for an example of the one-liner you can use to
 
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+Trivial update: noted compatibility through WP 3.3+ and minor tweaks (not related to functionality)
 
 = 1.1 =
 Minor update: added admin color scheme-specific color defaults; noted compatibility through WP 3.2+
