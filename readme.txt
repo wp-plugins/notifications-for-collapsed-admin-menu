@@ -2,10 +2,12 @@
 Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, notification, highlight, coffee2code
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 3.3
-Stable tag: 1.1.1
-Version: 1.1.1
+Tested up to: 3.4
+Stable tag: 1.1.2
+Version: 1.1.2
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -24,10 +26,6 @@ By default, the plugin utilizes WordPress's pending/update count background high
 
 *NOTE:* As the plugin's name suggests, this plugin only takes effect if the admin sidebar menu is collapsed.  Also, the admin user must have JavaScript enabled.
 
-*ADVANCED:* You can customize the background color used by applying a filter to 'c2c_collapsed_admin_menu_icon_highlight_color'.  For example, in your theme's functions.php file, you can add this line (but replace "#f5f500" with the color you want):
-
-    `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', create_function( '', 'return "#f5f500";' ) );`
-
 Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Plugin Directory Page](http://wordpress.org/extend/plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
 
 
@@ -45,7 +43,9 @@ There is no need for this plugin to do anything in this situation because WordPr
 
 = Can I change the background color used to highlight the comments/plugins icons? =
 
-Yes.  See the description section for an example of the one-liner you can use to customize the color.
+You can customize the background color used by applying a filter to 'c2c_collapsed_admin_menu_icon_highlight_color'.  For example, in your theme's functions.php file, you can add this line (but replace "#f5f500" with the color you want):
+
+    `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', create_function( '', 'return "#f5f500";' ) );`
 
 
 == Screenshots ==
@@ -54,6 +54,14 @@ Yes.  See the description section for an example of the one-liner you can use to
 
 
 == Changelog ==
+
+= 1.1.2 =
+* Re-license as GPLv2 or later (from X11)
+* Add 'License' and 'License URI' header tags to readme.txt and plugin file
+* Remove ending PHP close tag
+* Update screenshot for WP 3.4
+* Minor readme.txt changes
+* Note compatibility through WP 3.4+
 
 = 1.1.1 =
 * Hook 'admin_enqueue_scripts' action instead of 'admin_head' to output CSS
@@ -82,6 +90,9 @@ Yes.  See the description section for an example of the one-liner you can use to
 
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Trivial update: noted compatibility through WP 3.4+; explicitly stated license
 
 = 1.1.1 =
 Trivial update: noted compatibility through WP 3.3+ and minor tweaks (not related to functionality)
