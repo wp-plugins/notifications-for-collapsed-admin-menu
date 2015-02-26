@@ -1,32 +1,33 @@
 <?php
 /**
+ * Plugin Name: Notifications for Collapsed Admin Menu
+ * Version:     1.2.1
+ * Plugin URI:  http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/
+ * Author:      Scott Reilly
+ * Author URI:  http://coffee2code.com/
+ * License:     GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Description: Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
+ *
+ * Compatible with WordPress 2.8 through 4.1+.
+ *
+ * =>> Read the accompanying readme.txt file for instructions and documentation.
+ * =>> Also, visit the plugin's homepage for additional information and updates.
+ * =>> Or visit: https://wordpress.org/plugins/notifications-for-collapsed-admin-menu/
+ *
  * @package Notifications_for_Collapsed_Admin_Menu
- * @author Scott Reilly
- * @version 1.2
+ * @author  Scott Reilly
+ * @version 1.2.1
  */
-/*
-Plugin Name: Notifications for Collapsed Admin Menu
-Version: 1.2
-Plugin URI: http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/
-Author: Scott Reilly
-Author URI: http://coffee2code.com/
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Description: Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
-
-Compatible with WordPress 2.8 through 3.8+.
-
-=>> Read the accompanying readme.txt file for instructions and documentation.
-=>> Also, visit the plugin's homepage for additional information and updates.
-=>> Or visit: http://wordpress.org/plugins/notifications-for-collapsed-admin-menu/
-
-TODO:
-	* Explore other methods of notification (i.e. numeric count)
-	* Don't assign tooltip to comment icon if it has submenus (and thus WP would show pending comments count)
-*/
 
 /*
-	Copyright (c) 2010-2014 by Scott Reilly (aka coffee2code)
+ * TODO:
+ * - Explore other methods of notification (i.e. numeric count)
+ * - Don't assign tooltip to comment icon if it has submenus (and thus WP would show pending comments count)
+ */
+
+/*
+	Copyright (c) 2010-2015 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
@@ -55,13 +56,11 @@ if ( is_admin() && ! class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) 
 		 * @since 1.1.1
 		 */
 		public static function version() {
-			return '1.2';
+			return '1.2.1';
 		}
 
 		/**
-		 * Initialization (primarily hooking actions)
-		 *
-		 * @return void
+		 * Initialization (primarily hooking actions).
 		 */
 		public static function init() {
 			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'add_css' ) );
@@ -70,8 +69,6 @@ if ( is_admin() && ! class_exists( 'c2c_NotificationsForCollapsedAdminMenu' ) ) 
 
 		/**
 		 * Echoes CSS within style tag.
-		 *
-		 * @return void (Text will be echoed.)
 		 */
 		public static function add_css() {
 			global $wp_version;
@@ -113,8 +110,6 @@ HTML;
 
 		/**
 		 * Enqueues javascript.
-		 *
-		 * @return void
 		 */
 		public static function enqueue_js() {
 			$base = 'notifications-for-collapsed-admin-menu';

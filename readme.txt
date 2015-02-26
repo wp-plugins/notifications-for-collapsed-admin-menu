@@ -5,8 +5,8 @@ Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, noti
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 3.8
-Stable tag: 1.2
+Tested up to: 4.1
+Stable tag: 1.2.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
 
@@ -23,7 +23,7 @@ By default, the plugin utilizes WordPress's pending/update count background high
 
 *NOTE:* As the plugin's name suggests, this plugin only takes effect if the admin sidebar menu is collapsed.  Also, the admin user must have JavaScript enabled.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Plugin Directory Page](http://wordpress.org/plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/notifications-for-collapsed-admin-menu/) | [Plugin Directory Page](https://wordpress.org/plugins/notifications-for-collapsed-admin-menu/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -42,15 +42,24 @@ There is no need for this plugin to do anything in this situation because WordPr
 
 You can customize the background color used by applying a filter to 'c2c_collapsed_admin_menu_icon_highlight_color'.  For example, in your theme's functions.php file, you can add this line (but replace "#f5f500" with the color you want):
 
-    `add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', create_function( '', 'return "#f5f500";' ) );`
+`add_filter( 'c2c_collapsed_admin_menu_icon_highlight_color', create_function( '', 'return "#f5f500";' ) );`
 
 
 == Screenshots ==
 
-1. A comparison of a collapsed admin sidebar menu for a stock WordPress installation, with the plugin activated under WP 2.8+/2.9+, and under WP 3.0+.
+1. A comparison of a collapsed admin sidebar menu for a stock WordPress installation, with the plugin activated under WP 2.8+/2.9+, and under WP 3.x+ and WP 4.x+.
 
 
 == Changelog ==
+
+= 1.2.1 (2015-02-25) =
+* Reformat plugin header
+* Minor code reformatting (spacing, bracing)
+* Change documentation links to wp.org to be https
+* Minor documentation spacing changes throughout
+* Note compatibility through WP 4.1+
+* Update copyright date (2015)
+* Add plugin icon
 
 = 1.2 (2013-12-18) =
 * Detect WP 3.8 and determine default background colors based on the chosen admin color theme
@@ -102,6 +111,9 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Trivial update: noted compatibility through WP 4.1+ and updated copyright date (2015)
 
 = 1.2 =
 Minor update: better background color defaults under WP 3.8; updated banner and screenshot images; noted compatibility through WP 3.8+
