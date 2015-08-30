@@ -5,7 +5,7 @@ Tags: admin, sidebar, menu, comments, moderation, pending, plugins, update, noti
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.8
-Tested up to: 4.1
+Tested up to: 4.3
 Stable tag: 1.2.1
 
 Highlights the comments and plugins icons in the collapsed admin sidebar menu when notifications are pending.
@@ -51,6 +51,9 @@ You can customize the background color used by applying a filter to 'c2c_collaps
 
 
 == Changelog ==
+
+= () =
+* Update: Note compatibility through WP 4.3+
 
 = 1.2.1 (2015-02-25) =
 * Reformat plugin header
